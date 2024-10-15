@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutUpdateProfile"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvBanner"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="64dp"-->
+<!--                android:text="@string/health_monitor"-->
+<!--                android:textSize="@dimen/font_banner"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textColor="?attr/colorPrimary" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvBannerDescription"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/banner_description"-->
+<!--                android:textSize="@dimen/font_normal_16"-->
+<!--                android:textStyle="italic"-->
+<!--                android:layout_gravity="center" />-->
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="32dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/desc"
+                app:srcCompat="@drawable/img_user_default" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:autofillHints="name"
+                android:hint="@string/nhap_ho_va_ten"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autofillHints="emailAddress"
+                android:hint="@string/nhap_email"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/fontsize_content_small" />
+
+<!--            <EditText-->
+<!--                android:id="@+id/edtPhone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:autofillHints="phone"-->
+<!--                android:hint="@string/nhap_so_dien_thoai"-->
+<!--                android:inputType="phone"-->
+<!--                android:textSize="@dimen/fontsize_content_small" />-->
+
+            <EditText
+                android:id="@+id/edtAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autofillHints="number"
+                android:hint="@string/nhap_tuoi"
+                android:inputType="number"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <EditText
+                android:id="@+id/edtHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autofillHints="number"
+                android:hint="@string/nhap_chieu_cao_cm"
+                android:inputType="number"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <EditText
+                android:id="@+id/edtWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autofillHints="number"
+                android:hint="@string/nhap_can_nang_kg"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <RadioGroup
+                android:id="@+id/radGrpGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:checked="true"
+                    android:text="@string/nam"
+                    android:textSize="@dimen/fontsize_content_small" />
+
+                <RadioButton
+                    android:id="@+id/radFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_weight="0"
+                    android:text="@string/nu"
+                    android:textSize="@dimen/fontsize_content_small" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnUpdateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:height="60dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="@string/cap_nhat" />
+
+            <TextView
+                android:id="@+id/tvSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/bo_qua" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
